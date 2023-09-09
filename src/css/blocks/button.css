@@ -1,0 +1,102 @@
+button,
+a {
+    border: 2px solid transparent;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #ffffff;
+    width: max-content;
+    max-width: 20rem;
+    min-width: 4rem;
+    min-height: 4rem;
+    background-color: transparent;
+}
+
+.btn-primary,
+.btn-tertiary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 0.8rem; /* вертикальный внутренний отступ */
+    padding-inline-end: 1.4rem; /* отступ справа от текста по макету */
+    -webkit-padding-end: 1.4rem; /* Safari, old Chrome */
+
+    -webkit-padding-start: 1.4rem; /* Safari, old Chrome */
+    padding-inline-start: 1.4rem; /* внутренний отступ по горизонтали */
+}
+
+/* иконки внутри */
+button img,
+button svg {
+    margin-left: 0.8rem;
+}
+
+button img,
+button svg path {
+    fill: currentColor;
+    color: currentColor;
+}
+
+/* ссылки */
+a {
+    color: var(--link-color-default);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-title-hover);
+    border-bottom-color: var(--link-border-hover);
+}
+
+a:focus {
+    border: var(--link-border-focus);
+}
+
+/* btn-primary */
+.btn-primary {
+    background-color: var(--button-primary-bgc);
+}
+
+.btn-primary:hover {
+    background-color: var(--button-primary-bgc-hover);
+}
+
+.btn-primary:focus {
+    outline: 1px solid var(--button-primary-bgc);
+    background-color: var(--button-primary-bgc);
+    box-shadow: 0 0 0 1px #ffffff inset;
+}
+
+/* btn-tertiary */
+.btn-tertiary {
+    color: #054ada;
+}
+
+.btn-tertiary:hover {
+    background-color: #e5e5e5;
+}
+
+.btn-tertiary:focus {
+    box-shadow: 0 0 0 1px #ffffff inset;
+    outline: 1px solid #0f62fe;
+}
+
+/* negative */
+
+/* icon */
+.btn-icon {
+    width: auto;
+    padding: 0;
+}
+
+.btn-icon svg {
+    fill: none;
+    height: 16px;
+    width: 16px;
+    stroke: #2d2d2d;
+    overflow: visible;
+}

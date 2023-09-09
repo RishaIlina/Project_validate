@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>App</title>
+        <script type="module">
+            // https://doka.guide/js/match-media/
+            if (
+                matchMedia("(prefers-color-scheme: dark)").media === "not all"
+            ) {
+                document.documentElement.style.display = "none";
+                document.head.insertAdjacentHTML(
+                    "beforeend",
+                    '<link rel="stylesheet" href="src/css/light.css" onload="document.documentElement.style.display=\'\'">',
+                );
+            }
+        </script>
+        <link
+            rel="stylesheet"
+            href="src/css/light.css"
+            media="(prefers-color-scheme: light)"
+        />
+        <link
+            rel="stylesheet"
+            href="src/css/dark.css"
+            media="(prefers-color-scheme: dark)"
+        />
+        <link rel="stylesheet" href="src/css/style.css" />
+    </head>
+
+    <header class="header">
+        <div class="container">
+            <div class="flex">
+                <div class="header-buttons mr-8">
+                    <button type="button" id="sign" class="btn-tertiary">Sign in</button>
+                    <button type="button" id="signup" class="btn-primary">Sign up</button>
+                </div>
+
+                <fieldset class="switcher">
+                    <input type="checkbox" class="switch" />
+                    <label for="s2"></label>
+                </fieldset>
+            </div>
+        </div>
+    </header>
+
+    <script src="src/js/theme-switcher.js"></script>
+    <script src="src/js/index.js"></script>
+</body>
+</html>

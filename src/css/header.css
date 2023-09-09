@@ -1,0 +1,44 @@
+.header {
+    padding: 2rem 0;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.06) 0 6px 6px;
+}
+
+.header-logo {
+    padding: 0;
+}
+
+.header-logo,
+.header-logo:hover {
+    border-bottom: 2px solid transparent; /* в навигации такие же сылки */
+}
+
+.header-logo:focus {
+    border: 2px solid transparent;
+}
+
+.header-logo svg {
+    color: var(--logo-fill);
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    margin-left: 6rem;
+}
+
+/* кнопка бургер */
+.header-buttons .burger-button {
+    display: none;
+}
+
+/* адаптив */
+@media screen and (max-width: 992px) {
+    .header-nav {
+        display: none;
+    }
+
+    .header-buttons .burger-button {
+        display: inline-flex;
+    }
+}

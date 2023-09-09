@@ -1,0 +1,64 @@
+@import "../css/vendor/normalize.css";
+@import "../css/header.css";
+@import "../css/blocks/button.css";
+@import "../css/blocks/forms.css";
+@import "../css/blocks/modal.css";
+
+html {
+    /* Firefox не учитывает 62.5% */
+    font-size: 10px; /* указываем явно */
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    color: #161616;
+    background-color: var(--body-color);
+}
+
+img,
+svg {
+    display: block; /* убираем зазор снизу */
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+main {
+    padding: 2rem 0;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 1.6rem;
+}
+
+/* атомарные классы */
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.ml-4 {
+    margin-left: 0.4rem;
+}
+
+.mr-8 {
+    margin-right: 0.8rem;
+}
+
+.inline-flex {
+    display: inline-flex;
+}

@@ -45,6 +45,117 @@
         </div>
     </header>
 
+     <!-- модалка  -->
+     <dialog class="modal" id="modal">
+        <header>
+            <h2>Our modal</h2>
+            <button class="btn-tertiary" id="close-modal">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 32 32"
+                    aria-hidden="true"
+                    role="presentation"
+                    focusable="false"
+                >
+                    <path d="m6 6 20 20M26 6 6 26"></path>
+                </svg>
+            </button>
+        </header>
+        <section>
+            <form action="#" id="registration-form">
+                <div class="input-container">
+                    <label for="username">Your name</label>
+                    <input
+                        id="register-username"
+                        name="username"
+                        type="text"
+                        placeholder="Name"
+                        autocomplete="off"
+                        required
+                    />
+                    <span class="input-error" id="username-error"></span>
+                </div>
+
+                <div class="input-container">
+                    <label for="register-password">Your password</label>
+                    <input
+                        type="password"
+                        id="register-password"
+                        placeholder="Password"
+                        autocomplete="off"
+                        name="password"
+                        required
+                    />
+                    <span class="input-error" id="password-error"></span>
+                </div>
+
+                <div class="input-container">
+                    <label for="register-email">Input email</label>
+                    <input
+                        type="email"
+                        id="register-email"
+                        placeholder="Email"
+                        autocomplete="off"
+                        name="email"
+                        required
+                    />
+                    <span class="input-error" id="email-error"></span>
+                </div>
+
+                <div class="input-container">
+                    <label for="register-phone">Input phone</label>
+                    <input
+                        type="tel"
+                        placeholder="Phone"
+                        id="register-phone"
+                        name="phone"
+                        autocomplete="off"
+                        required
+                    />
+                    <span class="input-error" id="phone-error"></span>
+                </div>
+
+                <!-- <div>
+                        <label for="register-phone">Your message</label>
+                        <textarea
+                            placeholder="Enter your message"
+                            id="register-message"
+                            autocomplete="off"
+                            required
+                        ></textarea>
+                    </div> -->
+
+                <!-- <div>
+                    <label for="text">Your message</label>
+                    <textarea
+                        id="text"
+                        rows="5"
+                        cols="33"
+                        placeholder="Enter your message"
+                        autocomplete="off"
+                    ></textarea>
+                </div> -->
+
+                <button class="btn-primary">Send data</button>
+
+                <!-- <div>
+                        <label for="number"> Input Number </label>
+                        <input
+                            id="number"
+                            type="number"
+                            value="1"
+                            placeholder="count"
+                            autocomplete="off"
+                        />
+                    </div> -->
+            </form>
+        </section>
+        <footer>
+            <span>Forgot your password</span>
+            <a href="#">Use another account</a>
+        </footer>
+    </dialog>
+
     <script src="src/js/theme-switcher.js"></script>
     <script src="src/js/index.js"></script>
 </body>

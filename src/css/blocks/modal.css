@@ -1,0 +1,33 @@
+
+
+.modal {
+    background-color: var(--modal-bgc);
+    width: 48rem;
+    height: calc(100vh - 8rem);
+    /* display: flex;
+    flex-direction: column; */
+    padding: 2rem;
+    border: 0;
+    box-sizing: border-box;
+}
+
+dialog::backdrop {
+    background-color: var(--modal-overlay);
+}
+
+.modal header,
+.modal section,
+.modal footer {
+    margin-bottom: 1.2rem;
+}
+
+.modal header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal h2 {
+    width: 93%;
+    display: inline-block;
+}

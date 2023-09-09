@@ -1,3 +1,135 @@
+.input-container {
+    display: inline-flex;
+    flex-direction: column;
+    margin-bottom: 1.6rem;
+    width: 100%;
+}
+
+/* display: flex;
+min-height: var(--base-size-md);
+width: 100%;
+flex-direction: row;
+box-sizing: border-box;
+align-items: center;
+overflow: hidden;
+border: 1px solid var(--grey-base);
+border-radius: var(--border-radius);
+position: relative;
+transition: border 0.3s ease-in-out;
+background: var(--background-color); */
+
+label {
+    display: inline-block;
+    height: auto;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--input-label-color);
+    margin-bottom: 0.4rem;
+    user-select: none;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+textarea {
+    background-color: var(--input-bg-color);
+    color: var(--input-text-color);
+    display: inline-block;
+    width: 100%;
+    padding: 0.8rem 1.6rem;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 1.6rem;
+    border: 0;
+    line-height: 1rem;
+    border-bottom: var(--input-border-default);
+    box-sizing: border-box;
+    min-height: 4rem;
+    text-overflow: ellipsis;
+    margin-bottom: 0.4rem;
+    overflow-x: hidden;
+    max-width: 28rem;
+    outline: none;
+}
+
+input[type="number"] {
+    width: 14rem;
+}
+
+.input-error {
+    color: var(--text-color);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.32px;
+    max-width: 28rem;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="text"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="password"]::placeholder,
+input[type="email"]::placeholder,
+input[type="number"]::placeholder,
+textarea::placeholder {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--input-placeholder-color);
+}
+
+input[type="text"]:hover,
+input[type="tel"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover,
+input[type="number"]:hover,
+textarea:hover {
+    outline: var(--input-outline);
+    outline-offset: -2px;
+    border-color: transparent;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    outline: var(--input-outline);
+    outline-offset: -2px;
+    border-color: transparent;
+}
+
+input[type="text"]:disabled,
+input[type="tel"]:disabled,
+input[type="password"]:disabled,
+input[type="email"]:disabled,
+input[type="number"]:focus,
+textarea:disabled {
+    background-color: var(--input-bg-color-disabled);
+    border-bottom-color: transparent;
+    user-select: none;
+    pointer-events: none;
+}
+
+/* input[type="text"]:invalid,
+input[type="tel"]:invalid,
+input[type="password"]:invalid,
+input[type="email"]:invalid {
+    background-color: #fef8f6;
+    border-color: #c13515;
+    outline: none;
+} */
+
 /* switcher */
 .switcher {
     display: inline-block;

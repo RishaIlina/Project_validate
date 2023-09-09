@@ -1,0 +1,68 @@
+:root {
+    /* общий фон */
+    --body-color: #ffffff;
+    /* цвет заголовков */
+    --title-color: #161616;
+    /* цвет подзаголовков */
+    --subtitle-color: #42526b;
+
+    /* --bg-hover: #f7f7f7; */
+
+    /* размеры шрифтов */
+    --font-s: 1.4rem 400 "Segoe UI", sans-serif;
+    --font-md: 1.6rem 400 "Segoe UI", sans-serif;
+    --font-lg: 2rem 400 "Segoe UI", sans-serif;
+    --font-xl: 2.4rem 400 "Segoe UI", sans-serif;
+
+    /* переменные для размеров (padding, margin) */
+    --base-size-s: 1.4rem;
+    --base-size-md: 1.6rem;
+    --base-size-lg: 1.8rem;
+
+    /* модалка */
+    --modal-bgc: #f4f4f4; /* цвет фона */
+    --modal-overlay: green; /* оверлей */
+}
+
+/* logo */
+.header-logo svg {
+    --logo-fill: #161616;
+}
+
+/* links */
+a {
+    --link-color-default: #525252;
+    --link-border-default: 2px solid #e0e0e0;
+}
+
+a:hover {
+    --link-title-hover: #161616;
+    --link-border-hover: #8d8d8d;
+}
+
+a:focus {
+    --link-border-focus: 2px solid #0f62fe;
+}
+
+/* buttons */
+button {
+    /* цвет фона primary в состоянии покоя */
+    --button-primary-bgc: #0f62fe;
+    /* цвет фона primary при наведении */
+    --button-primary-bgc-hover: #0353e9;
+}
+
+/* btn-primary */
+.btn-primary {
+    background-color: var(--button-primary-bgc);
+}
+
+.btn-primary:hover {
+    background-color: var(--button-primary-bgc-hover);
+}
+
+.btn-primary:focus {
+    outline: 1px solid var(--button-primary-bgc);
+    background-color: var(--button-primary-bgc);
+    box-shadow: 0 0 0 1px #ffffff inset;
+}

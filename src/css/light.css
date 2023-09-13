@@ -6,8 +6,6 @@
     /* цвет подзаголовков */
     --subtitle-color: #42526b;
 
-    /* --bg-hover: #f7f7f7; */
-
     /* размеры шрифтов */
     --font-s: 1.4rem 400 "Segoe UI", sans-serif;
     --font-md: 1.6rem 400 "Segoe UI", sans-serif;
@@ -18,10 +16,6 @@
     --base-size-s: 1.4rem;
     --base-size-md: 1.6rem;
     --base-size-lg: 1.8rem;
-
-    /* модалка */
-    --modal-bgc: #f4f4f4; /* цвет фона */
-    --modal-overlay: green; /* оверлей */
 }
 
 /* logo */
@@ -33,14 +27,12 @@
 a {
     --link-color-default: #525252;
     --link-border-default: 2px solid #e0e0e0;
-}
 
-a:hover {
+    * состояние hover */
     --link-title-hover: #161616;
     --link-border-hover: #8d8d8d;
-}
 
-a:focus {
+    /* состояние focus */
     --link-border-focus: 2px solid #0f62fe;
 }
 
@@ -50,6 +42,17 @@ button {
     --button-primary-bgc: #0f62fe;
     /* цвет фона primary при наведении */
     --button-primary-bgc-hover: #0353e9;
+}
+
+/* кнопка без текста с иконкой внутри */
+[data-btn-icon="btn-icon"]:hover {
+    background-color: #e5e5e5;
+}
+
+[data-btn-icon="btn-icon"] img,
+[data-btn-icon="btn-icon"] svg {
+    --icon-fill: #161616;
+    color: var(--icon-fill);
 }
 
 /* btn-primary */
@@ -114,4 +117,13 @@ textarea:disabled {
 /* текст с ошибкой */
 .input-error {
     --text-color: #da1e28;
+}
+
+/* модалка */
+dialog {
+    --modal-bgc: #f4f4f4; /* цвет фона */
+}
+
+dialog::backdrop {
+    --modal-overlay: rgba(22, 22, 22, 0.5); /* оверлей */
 }

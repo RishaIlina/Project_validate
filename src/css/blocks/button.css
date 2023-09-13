@@ -1,5 +1,8 @@
 button,
 a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     border: 2px solid transparent;
     outline: 0;
     padding: 0;
@@ -19,12 +22,11 @@ a {
 .btn-primary,
 .btn-tertiary {
     display: inline-flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
     padding-block: 0.8rem; /* вертикальный внутренний отступ */
     padding-inline-end: 1.4rem; /* отступ справа от текста по макету */
     -webkit-padding-end: 1.4rem; /* Safari, old Chrome */
-
     -webkit-padding-start: 1.4rem; /* Safari, old Chrome */
     padding-inline-start: 1.4rem; /* внутренний отступ по горизонтали */
 }
@@ -41,19 +43,34 @@ button svg path {
     color: currentColor;
 }
 
+/* кнопка без текста и иконкой внутри */
+[data-btn-icon="btn-icon"] {
+    cursor: auto;
+}
+
+[data-btn-icon="btn-icon"] img,
+[data-btn-icon="btn-icon"] svg {
+    margin-left: 0;
+    fill: var(--icon-fill);
+    color: var(--icon-fill);
+}
+
 /* ссылки */
 a {
+    padding: 0 1.6rem;
     color: var(--link-color-default);
     text-decoration: none;
 }
 
 a:hover {
     color: var(--link-title-hover);
-    border-bottom-color: var(--link-border-hover);
+    transition: color 0.3s ease-in-out;
 }
 
 a:focus {
+    color: var(--link-title-hover);
     border: var(--link-border-focus);
+    transition: border 0.3s ease-in-out;
 }
 
 /* btn-primary */
@@ -83,20 +100,4 @@ a:focus {
 .btn-tertiary:focus {
     box-shadow: 0 0 0 1px #ffffff inset;
     outline: 1px solid #0f62fe;
-}
-
-/* negative */
-
-/* icon */
-.btn-icon {
-    width: auto;
-    padding: 0;
-}
-
-.btn-icon svg {
-    fill: none;
-    height: 16px;
-    width: 16px;
-    stroke: #2d2d2d;
-    overflow: visible;
 }

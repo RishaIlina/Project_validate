@@ -10,7 +10,7 @@
 
 .header-logo,
 .header-logo:hover {
-    border-bottom: 2px solid transparent; /* в навигации такие же сылки */
+    border-bottom: 2px solid transparent; /* в навигации такие же сcылки */
 }
 
 .header-logo:focus {
@@ -27,13 +27,19 @@
     margin-left: 6rem;
 }
 
+/* навигация */
+.header-nav__link.active {
+    border: var(--link-border-focus);
+    color: var(--link-title-hover);
+}
+
 /* кнопка бургер */
-.header-buttons .burger-button {
+.burger-button {
     display: none;
 }
 
 /* адаптив */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
     .header-nav {
         display: none;
     }

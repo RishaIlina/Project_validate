@@ -62,3 +62,8 @@ main {
 .inline-flex {
     display: inline-flex;
 }
+
+/* ширина инпутов, селектов */
+.w-30 {
+    width: 30rem;
+}

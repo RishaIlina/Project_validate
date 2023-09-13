@@ -1,7 +1,13 @@
 const modal = document.querySelector("#modal");
 const signBtn = document.querySelector("#signup");
 const closeModal = document.querySelector("#close-modal");
+const input = document.querySelectorAll("input");
+const form =document.querySelector("#register-form");
 const inputText = document.querySelector("#register-username");
+const password = document.querySelector("#register-password");
+const email = document.querySelector("#register-email");
+const phone = document.querySelector("#register-phone");
+
 
 // Открытие модалки
 signBtn.addEventListener("click", () => {
@@ -13,17 +19,16 @@ closeModal.addEventListener("click", () => {
     modal.close();
 });
 
-/* Обработчик событий текстовый инпут */
-inputText.addEventListener("change", (event) => {
-    console.log(event.target.value);
-
-    let error = document.querySelector("#username-error");
-
-    if(!event.target.value) {
-        error.textContent = "";
+// Выдаем ошибку при пустом input
+// Снятие фокуса с input
+input.forEach(element => {
+    element.addEventListener('blur', () => {
+    if (element.value.length === 0) {
+    showErr(element, "Can't be blank")
     }
-    else if (event.target.value.length < 3) {
-        error.textContent = "Поле не валидно";
-    }
+    });
+    });
 
-});
+// inputmask для номера телефона
+const inputmask = new Inputmask('+7 (999) 999-99-99');
+inputmask.mask(phone);

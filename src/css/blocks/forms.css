@@ -65,12 +65,6 @@ input[type="number"] {
     width: 14rem;
 }
 
-.field-error {
-    background-color: #fef8f6;
-    border-color: #c13515;
-    outline: none;
-}
-
 .input-error {
     color: var(--text-color);
     font-size: 12px;
@@ -133,14 +127,14 @@ textarea:disabled {
     pointer-events: none;
 }
 
-/* input[type="text"]:invalid,
-input[type="tel"]:invalid,
-input[type="password"]:invalid,
-input[type="email"]:invalid {
+input[type="text"]:focus:invalid,
+input[type="tel"]:focus:invalid,
+input[type="password"]:focus:invalid,
+input[type="email"]:focus:invalid {
     background-color: #fef8f6;
     border-color: #c13515;
     outline: none;
-} */
+}
 
 /* switcher */
 .switcher {

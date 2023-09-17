@@ -117,6 +117,14 @@ textarea:disabled {
     --input-bg-color-disabled: #262626;
 }
 
+input[type="text"]:focus:invalid,
+input[type="tel"]:focus:invalid,
+input[type="password"]:focus:invalid,
+input[type="email"]:focus:invalid {
+    --input-bg-color-invalid: #6f6f6f;
+    --input-border-color-invalid: #c13515;
+}
+
 /* текст с ошибкой */
 .input-error {
     --text-color: #ff8389;

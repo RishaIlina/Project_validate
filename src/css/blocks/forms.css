@@ -1,22 +1,66 @@
+.form-box {
+    background-color: #ffffff;
+    height: 100%;
+    width: 50%;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.form-box.active {
+    left: 50%;
+}
+
+.form {
+    width: 100%;
+    padding: 50px;
+    font-size: 16px;
+    position: absolute;
+    transition: 0.5s;
+}
+
+.form_signin {
+    left: 0;
+    transition-delay: 0.25s;
+}
+
+.form_signup {
+    left: 100%;
+    transition-delay: 0s;
+}
+
+.form-box.active .form_signin {
+    left: -100%;
+    transition-delay: 0s;
+}
+
+.form-box.active .form_signup {
+    left: 0;
+    transition-delay: 0.25s;
+}
+
+.form_title {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.form__forgot {
+    padding: 0;
+}
+
 .input-container {
     display: inline-flex;
     flex-direction: column;
     margin-bottom: 1.6rem;
-    width: 100%;
+    width: 75%;
 }
-
-/* display: flex;
-min-height: var(--base-size-md);
-width: 100%;
-flex-direction: row;
-box-sizing: border-box;
-align-items: center;
-overflow: hidden;
-border: 1px solid var(--grey-base);
-border-radius: var(--border-radius);
-position: relative;
-transition: border 0.3s ease-in-out;
-background: var(--background-color); */
 
 label {
     display: inline-block;
@@ -53,7 +97,6 @@ textarea {
     text-overflow: ellipsis;
     margin-bottom: 0.4rem;
     overflow-x: hidden;
-   /* max-width: 42rem; */
     outline: none;
 }
 
@@ -134,112 +177,4 @@ input[type="email"]:focus:invalid {
     background-color: var(--input-bg-color-invalid);
     border-color: var(--input-border-color-invalid);
     outline: none;
-}
-
-/* switcher */
-.switcher {
-    display: inline-block;
-    padding: 0;
-    height: 22px;
-    border: 0;
-    width: 24px;
-}
-
-@supports (-webkit-appearance: none) or (-moz-appearance: none) {
-    .switch {
-        --active: #0f62fe;
-        --active-inner: #ffffff;
-        --focus: 0.5px #f6f8ff;
-        --border: #ffffff;
-        --border-hover: #0353e9;
-        --background: #8d8d8d;
-        --disabled: #c6c6c6;
-        --disabled-inner: #c6c6c6;
-        appearance: none;
-        height: 21px;
-        outline: none;
-        display: inline-block;
-        vertical-align: top;
-        position: relative;
-        margin: 0;
-        cursor: pointer;
-
-        background: var(--b, var(--background));
-        transition:
-            background 0.3s,
-            border-color 0.3s,
-            box-shadow 0.2s;
-    }
-
-    .switch::after {
-        content: "";
-        display: block;
-        left: 0;
-        top: 0;
-        position: absolute;
-        transition:
-            transform var(--d-t, 0.3s) var(--d-t-e, ease),
-            opacity var(--d-o, 0.2s);
-    }
-
-    .switch:checked {
-        --b: var(--active);
-        --bc: var(--active);
-        --d-o: 0.3s;
-        --d-t: 0.6s;
-        --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
-    }
-
-    .switch:disabled {
-        --b: var(--disabled);
-        cursor: not-allowed;
-        opacity: 0.9;
-    }
-
-    .switch:disabled:checked {
-        --b: var(--disabled-inner);
-        --bc: var(--border);
-    }
-
-    .switch:disabled + label {
-        cursor: not-allowed;
-    }
-
-    .switch:hover:not(:checked):not(:disabled) {
-        --bc: var(--border-hover);
-    }
-
-    .switch + label {
-        font-size: 14px;
-        line-height: 21px;
-        display: inline-block;
-        vertical-align: top;
-        cursor: pointer;
-    }
-
-    .switch.switch {
-        width: 38px;
-        height: 24px;
-        border-radius: 12px;
-    }
-
-    .switch.switch::after {
-        left: 3px;
-        top: 3px;
-        border-radius: 50%;
-        width: 18px;
-        height: 18px;
-        background: var(--ab, var(--border));
-        transform: translateX(var(--x, 0));
-    }
-
-    .switch.switch:checked {
-        --ab: var(--active-inner);
-        --x: 14px;
-    }
-
-    .switch.switch:disabled:not(:checked)::after {
-        opacity: 0.6;
-        background-color: #8d8d8d;
-    }
 }

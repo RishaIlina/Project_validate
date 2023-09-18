@@ -18,11 +18,6 @@
     --base-size-lg: 1.8rem;
 }
 
-/* logo */
-.header-logo svg {
-    --logo-fill: #161616;
-}
-
 /* links */
 a {
     --link-color-default: #525252;
@@ -38,10 +33,14 @@ a {
 
 /* buttons */
 button {
-    /* цвет фона primary в состоянии покоя */
-    --button-primary-bgc: #0f62fe;
+    /* цвет фона primary-signin в состоянии покоя */
+    --button-primary-signin-bgc: #0f62fe;
     /* цвет фона primary при наведении */
-    --button-primary-bgc-hover: #0353e9;
+    --button-primary-signin-bgc-hover: #0353e9;
+     /* цвет фона primary в состоянии покоя */
+     --button-primary-signup-bgc: #e63b44;
+     /* цвет фона primary при наведении */
+     --button-primary-signup-bgc-hover: #d2343c;
 }
 
 /* кнопка без текста с иконкой внутри */
@@ -125,13 +124,4 @@ input[type="email"]:focus:invalid {
 /* текст с ошибкой */
 .input-error {
     --text-color: #da1e28;
-}
-
-/* модалка */
-dialog {
-    --modal-bgc: #f4f4f4; /* цвет фона */
-}
-
-dialog::backdrop {
-    --modal-overlay: rgba(22, 22, 22, 0.5); /* оверлей */
 }

@@ -11,19 +11,10 @@ a {
     cursor: pointer;
     font-weight: 400;
     font-size: 1.6rem;
-    color: #ffffff;
     width: max-content;
     max-width: 20rem;
     min-width: 4rem;
     min-height: 4rem;
-    background-color: transparent;
-}
-
-.btn-primary,
-.btn-tertiary {
-    display: inline-flex;
-    align-items: baseline;
-    justify-content: space-between;
     padding-block: 0.8rem; /* вертикальный внутренний отступ */
     padding-inline-end: 1.4rem; /* отступ справа от текста по макету */
     -webkit-padding-end: 1.4rem; /* Safari, old Chrome */
@@ -31,35 +22,25 @@ a {
     padding-inline-start: 1.4rem; /* внутренний отступ по горизонтали */
 }
 
-/* иконки внутри */
-button img,
-button svg {
-    margin-left: 0.8rem;
+.block-item-btn {
+    background-color: #ffffff;
+    color: #333333;
 }
 
-button img,
-button svg path {
-    fill: currentColor;
-    color: currentColor;
+.btn-primary {
+    display: inline-flex;
+    background-color: transparent;
+    color: #ffffff;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
-/* кнопка без текста и иконкой внутри */
-[data-btn-icon="btn-icon"] {
-    cursor: auto;
-}
-
-[data-btn-icon="btn-icon"] img,
-[data-btn-icon="btn-icon"] svg {
-    margin-left: 0;
-    fill: var(--icon-fill);
-    color: var(--icon-fill);
-}
 
 /* ссылки */
 a {
     padding: 0 1.6rem;
     color: var(--link-color-default);
-    text-decoration: none;
 }
 
 a:hover {
@@ -74,30 +55,30 @@ a:focus {
 }
 
 /* btn-primary */
-.btn-primary {
-    background-color: var(--button-primary-bgc);
+.btn-primary_signin {
+    background-color: var(--button-primary-signin-bgc);
 }
 
-.btn-primary:hover {
-    background-color: var(--button-primary-bgc-hover);
+.btn-primary_signin:hover {
+    background-color: var(--button-primary-signin-bgc-hover);
 }
 
-.btn-primary:focus {
-    outline: 1px solid var(--button-primary-bgc);
-    background-color: var(--button-primary-bgc);
+.btn-primary_signin:focus {
+    outline: 1px solid var(--button-primary-signin-bgc);
+    background-color: var(--button-primary-signin-bgc);
     box-shadow: 0 0 0 1px #ffffff inset;
 }
 
-/* btn-tertiary */
-.btn-tertiary {
-    color: #054ada;
+.btn-primary_signup {
+    background-color: var(--button-primary-signup-bgc);
 }
 
-.btn-tertiary:hover {
-    background-color: #e5e5e5;
+.btn-primary_signup:hover {
+    background-color: var(--button-primary-signup-bgc-hover);
 }
 
-.btn-tertiary:focus {
+.btn-primary_signup:focus {
+    outline: 1px solid var(--button-primary-signup-bgc);
+    background-color: var(--button-primary-signup-bgc);
     box-shadow: 0 0 0 1px #ffffff inset;
-    outline: 1px solid #0f62fe;
 }
